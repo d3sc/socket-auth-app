@@ -15,7 +15,7 @@ class SocketServices {
   }
 
   void connectAndListen() {
-    socket ??= IO.io("http://192.168.1.9:3000",
+    socket ??= IO.io("http://192.168.1.6:3000",
         IO.OptionBuilder().setTransports(["websocket"]).build());
 
     socket!.onConnect((data) => {print("Connected to socket")});

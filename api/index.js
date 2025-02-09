@@ -9,7 +9,7 @@ const io = new Server(server);
 const userSockets = new Map();
 
 io.on("connection", (socket) => {
-  console.log(`Connected : ${socket.io}`);
+  console.log(`Connected : ${socket.id}`);
 
   socket.on("user-join", (data) => {
     userSockets.set(data, socket.id);
